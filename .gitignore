@@ -1,6 +1,6 @@
 /venv
-path_and_query_param.ipynb
-BaseModel.ipynb
+
+
 /.vscode
 /Machine_Learning/FastAPI/users/__pycache__
 /core/__pychache__
@@ -17,7 +17,7 @@ users/__pycache__/__init__.cpython-312.pyc
 users/__pycache__/crud.cpython-312.pyc
 users/__pycache__/schemas.cpython-312.pyc
 users/__pycache__/views.cpython-312.pyc
-closest_sum.py
+
 __pycache__/items_views.cpython-311.pyc
 __pycache__/main.cpython-311.pyc
 core/models/__pycache__/__init__.cpython-311.pyc
@@ -34,3 +34,4 @@ api_v1/products/__pycache__/dependencies.cpython-311.pyc
 api_v1/products/__pycache__/schemas.cpython-311.pyc
 api_v1/products/__pycache__/views.cpython-311.pyc
 api_v1/products/__pycache__/__init__.cpython-311.pyc
+/Important_Learnings
