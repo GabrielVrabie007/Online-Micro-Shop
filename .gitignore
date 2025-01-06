@@ -35,3 +35,5 @@ api_v1/products/__pycache__/schemas.cpython-311.pyc
 api_v1/products/__pycache__/views.cpython-311.pyc
 api_v1/products/__pycache__/__init__.cpython-311.pyc
 /Important_Learnings
+alembic/versions/__pycache__/2025_01_06_2200-77dda4a2965b_create_table_products.cpython-311.pyc
+alembic/__pycache__/env.cpython-311.pyc
