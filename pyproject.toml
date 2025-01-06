@@ -15,6 +15,7 @@ aiosqlite = "^0.20.0"
 pydantic-settings = "^2.7.0"
 pydantic = {extras = ["email"], version = "^2.10.4"}
 pylint = "^3.3.3"
+alembic = "^1.14.0"
 
 
 
