@@ -39,3 +39,5 @@ alembic/versions/__pycache__/2025_01_06_2200-77dda4a2965b_create_table_products.
 alembic/__pycache__/env.cpython-311.pyc
 core/models/__pycache__/user.cpython-311.pyc
 alembic/versions/__pycache__/2025_01_06_2248-4ddc5f6549ba_create_users_table.cpython-311.pyc
+core/models/__pycache__/post.cpython-311.pyc
+alembic/versions/__pycache__/2025_01_07_1533-6205b79f1828_create_table_for_users_posts.cpython-311.pyc
