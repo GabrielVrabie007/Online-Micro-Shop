@@ -41,3 +41,11 @@ core/models/__pycache__/user.cpython-311.pyc
 alembic/versions/__pycache__/2025_01_06_2248-4ddc5f6549ba_create_users_table.cpython-311.pyc
 core/models/__pycache__/post.cpython-311.pyc
 alembic/versions/__pycache__/2025_01_07_1533-6205b79f1828_create_table_for_users_posts.cpython-311.pyc
+alembic/versions/__pycache__/2025_01_10_2010-5941dc996dcb_delete_profiles_table.cpython-311.pyc
+alembic/versions/__pycache__/2025_01_10_2020-3429363fe44c_create_table_profilesss.cpython-311.pyc
+alembic/versions/__pycache__/2025_01_10_2024-3b62daf97833_create_table_profiles.cpython-311.pyc
+alembic/versions/__pycache__/2025_01_10_2044-5a705a4fd8ff_drop_profile_table.cpython-311.pyc
+alembic/versions/__pycache__/2025_01_10_2045-46b162ea2e68_drop_profile_table.cpython-311.pyc
+alembic/versions/__pycache__/2025_01_10_2047-281c1ece480e_create_table_profile.cpython-311.pyc
+core/models/__pycache__/mixins.cpython-311.pyc
+core/models/__pycache__/profile.cpython-311.pyc
