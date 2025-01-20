@@ -49,3 +49,9 @@ alembic/versions/__pycache__/2025_01_10_2045-46b162ea2e68_drop_profile_table.cpy
 alembic/versions/__pycache__/2025_01_10_2047-281c1ece480e_create_table_profile.cpython-311.pyc
 core/models/__pycache__/mixins.cpython-311.pyc
 core/models/__pycache__/profile.cpython-311.pyc
+alembic/versions/__pycache__/2025_01_20_1539-807453720d07_create_orders_table.cpython-311.pyc
+alembic/versions/__pycache__/2025_01_20_1543-c5899793b862_create_orders.cpython-311.pyc
+alembic/versions/__pycache__/2025_01_20_2025-7c44c8552f78_create_order_product_association_table.cpython-311.pyc
+alembic/versions/__pycache__/2025_01_20_2034-35b3dd6586fd_create_order_product_association_table.cpython-311.pyc
+core/models/__pycache__/order_product_association.cpython-311.pyc
+core/models/__pycache__/order.cpython-311.pyc
