@@ -55,3 +55,6 @@ alembic/versions/__pycache__/2025_01_20_2025-7c44c8552f78_create_order_product_a
 alembic/versions/__pycache__/2025_01_20_2034-35b3dd6586fd_create_order_product_association_table.cpython-311.pyc
 core/models/__pycache__/order_product_association.cpython-311.pyc
 core/models/__pycache__/order.cpython-311.pyc
+alembic/versions/__pycache__/2025_01_22_0919-8a9e51bbdb04_qwerty.cpython-311.pyc
+alembic/versions/__pycache__/2025_01_22_0926-b393c4049f3e_add_count_column_to_product_association_.cpython-311.pyc
+alembic/versions/__pycache__/2025_01_23_0823-9f73ae58ff03_create_column_unit_price_for_table_.cpython-311.pyc
