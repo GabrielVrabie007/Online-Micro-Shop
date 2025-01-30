@@ -58,3 +58,9 @@ core/models/__pycache__/order.cpython-311.pyc
 alembic/versions/__pycache__/2025_01_22_0919-8a9e51bbdb04_qwerty.cpython-311.pyc
 alembic/versions/__pycache__/2025_01_22_0926-b393c4049f3e_add_count_column_to_product_association_.cpython-311.pyc
 alembic/versions/__pycache__/2025_01_23_0823-9f73ae58ff03_create_column_unit_price_for_table_.cpython-311.pyc
+api_v1/demo_auth/__pycache__/__init__.cpython-311.pyc
+api_v1/demo_auth/__pycache__/views.cpython-311.pyc
+/certs/
+api_v1/demo_auth/__pycache__/demo_jwt_auth.cpython-311.pyc
+auth/__pycache__/__init__.cpython-311.pyc
+auth/__pycache__/utils.cpython-311.pyc
