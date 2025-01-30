@@ -46,7 +46,20 @@ users_db: dict[str, UserSchema] = {
 def validate_auth_user(
     username: str = Form(),
     password: str = Form(),
-):
+) -> UserSchema:
+    """
+    Validate user credentials provided during login.
+
+    Args:
+        username: User's username
+        password: User's plain text password
+
+    Returns:
+        UserSchema object if validation successful
+
+    Raises:
+        HTTPException: If credentials invalid or user inactive
+    """
     unauthed_exc = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="invalid username or password",
@@ -70,19 +83,26 @@ def validate_auth_user(
 
 
 def get_current_token_payload(
-    # credentials: HTTPAuthorizationCredentials = Depends(http_bearer),
     token: str = Depends(oauth2_scheme),
 ) -> dict:
-    # token = credentials.credentials
+    """
+    Extract and validate the payload from a JWT token.
+
+    Args:
+        token: JWT token from request authorization header
+
+    Returns:
+        Dictionary containing token payload
+
+    Raises:
+        HTTPException: If token is invalid
+    """
     try:
-        payload = auth_utils.decode_jwt_token(
-            token=token,
-        )
+        payload = auth_utils.decode_jwt_token(token=token)
     except InvalidTokenError as e:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail=f"invalid token error: {e}",
-            # detail=f"invalid token error",
         )
     return payload
 
@@ -90,6 +110,18 @@ def get_current_token_payload(
 def get_current_auth_user(
     payload: dict = Depends(get_current_token_payload),
 ) -> UserSchema:
+    """
+    Get authenticated user from token payload.
+
+    Args:
+        payload: Decoded JWT payload containing user info
+
+    Returns:
+        UserSchema object for authenticated user
+
+    Raises:
+        HTTPException: If user not found
+    """
     username: str | None = payload.get("sub")
     if user := users_db.get(username):
         return user
@@ -101,7 +133,19 @@ def get_current_auth_user(
 
 def get_current_active_auth_user(
     user: UserSchema = Depends(get_current_auth_user),
-):
+) -> UserSchema:
+    """
+    Verify that the authenticated user is active.
+
+    Args:
+        user: Authenticated user object
+
+    Returns:
+        UserSchema object if user is active
+
+    Raises:
+        HTTPException: If user is inactive
+    """
     if user.active:
         return user
     raise HTTPException(
@@ -113,13 +157,20 @@ def get_current_active_auth_user(
 @router.post("/login/", response_model=TokenInfo)
 def auth_user_issue_jwt(
     user: UserSchema = Depends(validate_auth_user),
-):
+) -> TokenInfo:
+    """
+    Authenticate user and issue JWT token.
+
+    Args:
+        user: Validated user object from credentials
+
+    Returns:
+        TokenInfo object containing JWT access token
+    """
     jwt_payload = {
-        # subject
         "sub": user.username,
         "username": user.username,
         "email": user.email,
-        # "logged_in_at"
     }
     token = auth_utils.encode_jwt_token(jwt_payload)
     return TokenInfo(
@@ -132,7 +183,17 @@ def auth_user_issue_jwt(
 def auth_user_check_self_info(
     payload: dict = Depends(get_current_token_payload),
     user: UserSchema = Depends(get_current_active_auth_user),
-):
+) -> dict:
+    """
+    Get authenticated user's information.
+
+    Args:
+        payload: Decoded JWT payload
+        user: Authenticated and active user
+
+    Returns:
+        Dictionary containing user info and login timestamp
+    """
     iat = payload.get("iat")
     return {
         "username": user.username,

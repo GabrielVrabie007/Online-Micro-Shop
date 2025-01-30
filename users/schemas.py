@@ -10,6 +10,16 @@ class CreateUser(BaseModel):
 
 
 class UserSchema(BaseModel):
+    """
+    Schema for user data validation and storage.
+
+    Attributes:
+        username: User's unique identifier
+        password: Hashed password stored as bytes
+        email: Optional email address
+        active: User account status, defaults to True
+    """
+
     model_config = ConfigDict(strict=True)
 
     username: str
