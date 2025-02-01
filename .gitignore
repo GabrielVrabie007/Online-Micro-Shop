@@ -64,3 +64,4 @@ api_v1/demo_auth/__pycache__/views.cpython-311.pyc
 api_v1/demo_auth/__pycache__/demo_jwt_auth.cpython-311.pyc
 auth/__pycache__/__init__.cpython-311.pyc
 auth/__pycache__/utils.cpython-311.pyc
+api_v1/demo_auth/__pycache__/helpers.cpython-311.pyc
